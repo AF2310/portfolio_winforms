@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - Achilles Feratidis</title>
+        <script>
+        document.write('<base href="' + (window.location.pathname.indexOf("/portfolio_winforms") !== -1 ? "/portfolio_winforms/" : "/") + '" />');
+        (function(l) {
+            if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) { 
+                    return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+            }
+        }(window.location));
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="project_images/my_face.png" />
+    <style>
+        @keyframes pulseOrb {
+            0% { transform: scale(0.96); opacity: 0.8; }
+            50% { transform: scale(1.04); opacity: 1; text-shadow: 0 0 16px rgba(100, 180, 255, 0.8); }
+            100% { transform: scale(0.96); opacity: 0.8; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: radial-gradient(circle at center, #b1e0f0 0%, #68bde3 50%, #46a2d1 100%); color: #15476a; font-family: 'Segoe UI', Tahoma, sans-serif;">
+            <div style="font-size: 46px; margin-bottom: 16px; animation: pulseOrb 2s infinite ease-in-out;">&#x229E;</div>
+            <div style="font-size: 19px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 8px;">Starting Windows...</div>
+            <div style="font-size: 13px; color: #a0c4e8;">Loading WebAssembly Portfolio Runtime</div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui" style="display:none;">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">&#x2715;</a>
+    </div>
+    <script src="js/windowManager.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>
+

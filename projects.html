@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Achilles Feratidis [Projects Explorer]</title>
+    <link rel="stylesheet" href="style.css?v=10">
+</head>
+
+<body>
+    <!-- Windows 7 Aero Glass Main Window Container (ProjectsForm) -->
+    <div class="winforms-window" id="projects-form">
+        <!-- Window Title Bar -->
+        <div class="winforms-titlebar">
+            <div class="winforms-title">
+                <span class="winforms-app-icon">&#x1F4C2;</span>
+                <span>Personal Portfolio - Achilles Feratidis [Projects Explorer]</span>
+            </div>
+            <div class="winforms-window-controls">
+                <button class="win-btn win-min" aria-label="Minimize" title="Minimize">&#x2014;</button>
+                <button class="win-btn win-max" aria-label="Maximize" title="Maximize">&#x25A2;</button>
+                <button class="win-btn win-close" aria-label="Close" title="Close">&#x2715;</button>
+            </div>
+        </div>
+
+        <!-- Windows 7 MenuStrip -->
+        <div class="winforms-menubar">
+            <a href="index.html" class="menu-item"><span class="accesskey">F</span>ile</a>
+            <a href="projects.html" class="menu-item"><span class="accesskey">E</span>dit</a>
+            <a href="projects.html" class="menu-item"><span class="accesskey">V</span>iew</a>
+            <a href="projects.html" class="menu-item"><span class="accesskey">P</span>rojects</a>
+            <a href="contact.html" class="menu-item"><span class="accesskey">C</span>ontact</a>
+            <a href="index.html" class="menu-item"><span class="accesskey">H</span>elp</a>
+        </div>
+
+        <!-- Windows 7 ToolStrip Quick Actions -->
+        <div class="winforms-toolbar">
+            <a href="index.html" class="tool-btn" title="About Me Form">&#x1F464; About Me</a>
+            <a href="projects.html" class="tool-btn active-tool" title="Projects Form">&#x1F4C2; My Projects</a>
+            <a href="contact.html" class="tool-btn" title="Contact Form">&#x2709; Contact</a>
+            <span class="tool-sep"></span>
+            <button class="tool-btn" onclick="window.print()" title="Print Form">&#x1F5B6; Print</button>
+        </div>
+
+        <!-- TabControl Navigation -->
+        <header>
+            <h1>&#x1F4C2; My Projects Explorer</h1>
+            <nav>
+                <a href="index.html" class="winforms-tab">&#x1F464; About Me</a>
+                <a href="projects.html" class="winforms-tab active">&#x1F4C2; My Projects</a>
+                <a href="contact.html" class="winforms-tab">&#x2709; Contact</a>
+            </nav>
+        </header>
+
+        <!-- Main Form Body: Projects Grid -->
+        <main>
+            <section id="projects" class="section-card">
+                <div class="section-header-row">
+                    <div>
+                        <h2>Portfolio Projects Explorer (11 Projects in Integrated Windows View)</h2>
+                        <p class="section-subtitle">A collection of software, operating systems, and networking projects. Click any screenshot once to view it in full screen, or use the filter buttons to browse by topic.</p>
+                    </div>
+                </div>
+
+                <!-- Windows 7 Style Filter Bar & Search ToolStrip -->
+                <div class="projects-filter-bar">
+                    <div class="filter-controls-group">
+                        <span class="filter-label"><span class="filter-icon">&#x1F50E;</span> Filter:</span>
+                        <button class="filter-btn active" data-filter="all">All <span class="filter-count">(11)</span></button>
+                        <button class="filter-btn" data-filter="systems">Systems &amp; OS <span class="filter-count">(3)</span></button>
+                        <button class="filter-btn" data-filter="networking">Networking <span class="filter-count">(2)</span></button>
+                        <button class="filter-btn" data-filter="python">Python <span class="filter-count">(3)</span></button>
+                        <button class="filter-btn" data-filter="java">Java &amp; OOP <span class="filter-count">(4)</span></button>
+                        <button class="filter-btn" data-filter="csharp">C# / WinForms <span class="filter-count">(2)</span></button>
+                        <button class="filter-btn" data-filter="web">Web &amp; Cloud <span class="filter-count">(2)</span></button>
+                    </div>
+                    <div class="filter-search-group">
+                        <span class="search-icon">&#x1F50D;</span>
+                        <input type="text" id="project-search-input" class="win7-search-box" placeholder="Search projects by keyword, tech, or title..." aria-label="Search projects">
+                        <button id="clear-search-btn" class="win7-clear-search" title="Clear search" style="display: none;">&#x2715;</button>
+                    </div>
+                </div>
+                
+                <!-- CSS Grid of Projects -->
+                <div class="projects-container" id="projects-grid">
+                    
+                    <!-- 1. Ancient Greek Learning Web App -->
+                    <div class="project project-green" data-category="web" data-tags="web react typescript vite tailwind educational greek bloom">
+                        <h3>Ancient Greek Learning Web App</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Web App &amp; Learning Tool</div>
+                            <div class="image-single">
+                                <img src="project_images/project1.png" alt="Ancient Greek Learning Web App UI" title="Ancient Greek Learning Web App UI - Click to expand">
+                            </div>
+                            <p>An interactive web app that helps students practice and learn Ancient Greek vocabulary.</p>
+                            <p><strong>URL:</strong> <a href="https://kotoba-explorer.lovable.app/" target="_blank">kotoba-explorer.lovable.app</a></p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/greek-bloom" target="_blank">AF2310/greek-bloom</a></p>
+                            <ul>
+                                <li>Built with TypeScript and React 19</li>
+                                <li>Fast website build using Vite and Bun</li>
+                                <li>Styled with Tailwind CSS components</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Setting up the modern React 19 libraries and fixing styling issues so buttons look good on mobile screens.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. .NET Project Scanner (Windows Forms) -->
+                    <div class="project project-blue" data-category="csharp desktop" data-tags="c# .net winforms devops desktop scanner helper">
+                        <h3>.NET Project Scanner (WinForms)</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">C# &amp; Desktop App</div>
+                            <div class="image-single">
+                                <img src="project_images/project2.png" alt=".NET Project Scanner UI" title=".NET Project Scanner UI - Click to expand">
+                            </div>
+                            <p>A desktop tool made with C# Windows Forms. It searches folders for .NET projects, builds them automatically, and shows test results.</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/Devops-Helper" target="_blank">AF2310/Devops-Helper</a></p>
+                            <ul>
+                                <li>Created with C# and .NET 8 on Windows Forms</li>
+                                <li>Finds solution (.sln) and project (.csproj) files</li>
+                                <li>Runs build and test commands with one click</li>
+                                <li>Exports results to a clean JSON report file</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Running command-line tools in the background so the desktop window stays smooth and doesn't freeze while building.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Automated Security Testing Pipeline -->
+                    <div class="project project-yellow" data-category="python security" data-tags="python ai ollama zap docker security pentesting devsecops">
+                        <h3>Automated Security Testing Pipeline</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Python &amp; Security Testing</div>
+                            <div class="image-grid-2">
+                                <img src="project_images/project3.png" alt="ZAP Security Scan Dashboard" title="OWASP ZAP Security Scan Output - Click to expand">
+                                <img src="project_images/pentest_main.png" alt="Autonomous Pentesting Agent CLI" title="Autonomous AI Pentesting Terminal - Click to expand">
+                            </div>
+                            <p>An automated Python tool that scans web applications for security weaknesses using OWASP ZAP and a local AI assistant.</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/applying-pentesting-tools" target="_blank">AF2310/applying-pentesting-tools</a></p>
+                            <ul>
+                                <li>Written in Python using a local Ollama AI model</li>
+                                <li>Runs automatic website vulnerability scans with OWASP ZAP</li>
+                                <li>Tests applications running inside Docker containers</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Connecting Python scripts to Docker containers and parsing security reports to find high-risk vulnerabilities.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Kiosk Self-Service Application (All 6 Screenshots) -->
+                    <div class="project project-pink" data-category="java desktop" data-tags="java javafx mysql kiosk pos fast food desktop">
+                        <h3>Kiosk Self-Service Application</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Java &amp; Restaurant Checkout</div>
+                            <div class="image-grid-6">
+                                <img src="project_images/Screenshot (10).png" alt="Kiosk Menu Selection" title="Kiosk Screen 1: Menu selection - Click to expand">
+                                <img src="project_images/Screenshot (11).png" alt="Kiosk Meal Customization" title="Kiosk Screen 2: Meal customization - Click to expand">
+                                <img src="project_images/Screenshot (12).png" alt="Kiosk Order Review" title="Kiosk Screen 3: Order review - Click to expand">
+                                <img src="project_images/Screenshot (13).png" alt="Kiosk Order Cart" title="Kiosk Screen 4: Cart and extras - Click to expand">
+                                <img src="project_images/Screenshot (14).png" alt="Kiosk Payment Screen" title="Kiosk Screen 5: Payment flow - Click to expand">
+                                <img src="project_images/Screenshot (15).png" alt="Kiosk Receipt View" title="Kiosk Screen 6: Final receipt - Click to expand">
+                            </div>
+                            <p>A touchscreen ordering application for a fast food restaurant. Customers can browse meals, customize burgers, and check out.</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/KIOSK" target="_blank">AF2310/KIOSK</a></p>
+                            <ul>
+                                <li>Desktop interface built with Java and JavaFX</li>
+                                <li>Stores menu items and orders in a MySQL database</li>
+                                <li>Calculates cart totals, sales tax, and prints receipts</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Designing clean, touchscreen-friendly buttons in JavaFX and connecting order screens directly to a MySQL database.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Home Alarm System (IoT) -->
+                    <div class="project project-cyan" data-category="python embedded networking" data-tags="python micropython raspberry pi pico iot hardware mqtt sensors alarm breadboard">
+                        <h3>Home Alarm System (IoT)</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Microcontroller &amp; Hardware Alarm</div>
+                            <div class="image-grid-2">
+                                <img src="project_images/home_alarm_final1.png" alt="Home Alarm Prototype Circuit Board" title="Home Alarm Breadboard Circuit - Click to expand">
+                                <img src="project_images/home_alarm_final2.png" alt="Home Alarm Final Setup with Photoresistor" title="Final Hardware Setup with Light Sensor - Click to expand">
+                            </div>
+                            <div class="hardware-spec-badge">
+                                <span>Raspberry Pi Pico</span>
+                                <span>MQTT Wi-Fi</span>
+                                <span>PIR Motion Sensor</span>
+                            </div>
+                            <p>A physical home security system built with a Raspberry Pi Pico board. It uses motion and light sensors to detect intruders and sends alerts over Wi-Fi.</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/Home-Alarm-System" target="_blank">AF2310/Home-Alarm-System</a></p>
+                            <ul>
+                                <li>Programmed in MicroPython on a Raspberry Pi Pico</li>
+                                <li>Uses PIR motion sensors, magnetic door sensors, and buzzers</li>
+                                <li>Displays live status on a small LCD screen</li>
+                                <li>Sends real-time alarm alerts using MQTT and webhooks</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Wiring components cleanly on a breadboard and tuning the motion sensor so it only triggers on real movement.</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Solar System Simulation (Both Diagrams) -->
+                    <div class="project project-orange" data-category="java oop" data-tags="java gradle oop celestial hierarchy junit astronomy simulation">
+                        <h3>Solar System Simulation</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Java &amp; OOP Solar System</div>
+                            <div class="image-grid-2">
+                                <img src="project_images/solarsystem-app-diagram.png" alt="Solar System Hierarchy Diagram" title="Celestial Hierarchy Class Diagram - Click to expand">
+                                <img src="project_images/diagram-search.png" alt="Solar System Search Diagram" title="Search and Navigation Diagram - Click to expand">
+                            </div>
+                            <p>A Java program that models the planets and moons in our solar system using object-oriented programming.</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/Solar-System" target="_blank">AF2310/Solar-System</a></p>
+                            <ul>
+                                <li>Built with Java using the Gradle build tool</li>
+                                <li>Organized with classes for planets, moons, and stars</li>
+                                <li>Lets you search, sort, and move celestial bodies</li>
+                                <li>Unit tests to verify math and input validation</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Setting up class inheritance so moons stay linked to their parent planets, and writing unit tests to catch calculation bugs.</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Maxi Yatzy Game (Functional) -->
+                    <div class="project project-purple" data-category="python games" data-tags="python jupyter functional game multiplayer scorecard maxi yatzy dice">
+                        <h3>Maxi-Yatzy Multi-Player Game</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Python &amp; Dice Game</div>
+                            <div class="image-single">
+                                <img src="project_images/maxi_yatzy_gameplay.png" alt="Maxi Yatzy Terminal Gameplay & Scoreboard" title="Maxi-Yatzy Gameplay & Scoreboard - Click to expand">
+                            </div>
+                            <div class="hardware-spec-badge">
+                                <span>Python 3</span>
+                                <span>Jupyter Notebook</span>
+                                <span>Clean Functions</span>
+                            </div>
+                            <p>A multiplayer Maxi Yatzy dice game played in Python and Jupyter Notebook. Players roll dice, choose which to keep, and fill their scorecards.</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/Maxi-yatzy-game" target="_blank">AF2310/Maxi-yatzy-game</a></p>
+                            <ul>
+                                <li>Written in Python 3 inside a Jupyter Notebook</li>
+                                <li>Built with functional programming principles</li>
+                                <li>Tracks turns and scoreboards for multiple players</li>
+                                <li>Calculates points automatically for each Yatzy category</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Writing game logic with pure functions so rolling and rerolling dice never accidentally overwrites another player's score.</p>
+                        </div>
+                    </div>
+
+                    <!-- 8. Operating Systems Suite (Memory Manager & CPU Scheduler) -->
+                    <div class="project project-teal" data-category="systems java" data-tags="java systems memory virtual paging cpu scheduling round robin fcfs os">
+                        <h3>Operating Systems Suite</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Operating Systems &amp; Simulations</div>
+                            <p>Two Java projects that simulate how computer operating systems manage memory and decide which programs run next.</p>
+                            <div class="combined-links">
+                                <p><strong>Memory Manager:</strong> <a href="https://github.com/AF2310/memory-manager2/tree/main/memory-manager" target="_blank">AF2310/memory-manager2</a></p>
+                                <p><strong>CPU Scheduler:</strong> <a href="https://github.com/AF2310/cpu-scheduler/tree/main/cpu-scheduler" target="_blank">AF2310/cpu-scheduler</a></p>
+                            </div>
+                            <ul>
+                                <li>Simulates virtual memory paging and page replacement algorithms</li>
+                                <li>Simulates Round Robin and First-Come First-Served CPU scheduling</li>
+                                <li>Measures average process wait times and CPU utilization</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Understanding how computers split program memory into pages and keeping track of wait times for each running process.</p>
+                        </div>
+                    </div>
+
+                    <!-- 9. Network Protocols, Web Servers & Appliance Testing -->
+                    <div class="project project-navy" data-category="networking systems java python" data-tags="java python networking http web server tftp udp nat64 tayga dns protocols appliance">
+                        <h3>Network Protocols &amp; Appliance Testing</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Networks &amp; Custom Servers</div>
+                            <p>Three networking projects: building a custom HTTP web server from scratch, a TFTP file server over UDP, and testing a NAT64 network appliance.</p>
+                            <div class="combined-links">
+                                <p><strong>HTTP Web Server:</strong> <a href="https://github.com/AF2310/http_web_server_/blob/main/networksA2/assignment2/README.md" target="_blank">AF2310/http_web_server_</a></p>
+                                <p><strong>TFTP Protocol Server:</strong> <a href="https://github.com/AF2310/tftp-web-server" target="_blank">AF2310/tftp-web-server</a></p>
+                                <p><strong>NAT64 Appliance Test:</strong> <a href="https://github.com/AF2310/ttg-appliance-testing" target="_blank">AF2310/ttg-appliance-testing</a></p>
+                            </div>
+                            <ul>
+                                <li>Java multi-threaded HTTP server that serves web pages and file uploads</li>
+                                <li>Java TFTP server that transfers files over UDP sockets with retransmissions</li>
+                                <li>Python tests for a NAT64 DNS server translating IPv4 and IPv6 addresses</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Sending and receiving raw network packets over sockets and handling connection timeouts when transferring files.</p>
+                        </div>
+                    </div>
+
+                    <!-- 10. Linux Administration & Shell Automation (With Screenshot) -->
+                    <div class="project project-dark" data-category="systems linux" data-tags="linux bash shell sysadmin 1dv721 permissions audit systems administration">
+                        <h3>Linux Admin &amp; Shell Automation</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">Linux &amp; Bash Scripting</div>
+                            <div class="image-single">
+                                <img src="project_images/linux_image.png" alt="Linux System Administration Lab" title="1DV721 Linux System Administration - Click to expand">
+                            </div>
+                            <p>A collection of Linux system administration coursework, shell scripts, and security configurations.</p>
+                            <div class="combined-links">
+                                <p><strong>1DV721 Coursework:</strong> <a href="https://github.com/AF2310/working-with-linux-assignment/blob/main/A02_report_af224dz_1DV721.md" target="_blank">AF2310/working-with-linux</a></p>
+                                <p><strong>Bash Introduction:</strong> <a href="https://github.com/AF2310/Bash-introduction" target="_blank">AF2310/Bash-introduction</a></p>
+                            </div>
+                            <ul>
+                                <li>Managing Linux users, groups, and file permissions</li>
+                                <li>Automating common tasks with Bash shell scripts</li>
+                                <li>Documenting security best practices for university coursework</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Learning Linux terminal tools like grep and awk, and writing scripts to automate routine system administration tasks.</p>
+                        </div>
+                    </div>
+
+                    <!-- 11. Windows Forms Desktop Applications Suite -->
+                    <div class="project project-teal" data-category="csharp desktop" data-tags="c# .net winforms desktop appointment booking calculator event manager gui desktop">
+                        <h3>Windows Forms Applications</h3>
+                        <div class="project-content">
+                            <div class="project-badge-header">C# &amp; Windows Forms Suite</div>
+                            <div class="image-grid-3">
+                                <img src="project_images/assignment3_window.png" alt="Assignment 3 - Water &amp; Savings Calculator" title="Assignment 3: Water Intake and Retirement Calculator - Click to expand">
+                                <img src="project_images/assignment4_window.png" alt="Assignment 4 - Time Booking Application" title="Assignment 4: Appointment Time Booking Application - Click to expand">
+                                <img src="project_images/assignment5_window.png" alt="Assignment 5 - Event &amp; Participant Manager" title="Assignment 5: EventManager &amp; Participant Tracking - Click to expand">
+                            </div>
+                            <p>A collection of three desktop applications created with C# and .NET Windows Forms to practice object-oriented design and desktop user interfaces.</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/AF2310/windows-form-applications" target="_blank">AF2310/windows-form-applications</a></p>
+                            <ul>
+                                <li><strong>Calculator (Assignment 3):</strong> Calculates daily water needs based on weight and activity, plus long-term retirement savings with monthly deposits.</li>
+                                <li><strong>Appointment Manager (Assignment 4):</strong> A time booking tool to create, edit, delete, and filter scheduled appointments by time and status.</li>
+                                <li><strong>Event Manager (Assignment 5):</strong> Manages event participants, addresses, and fee calculations with structured lists and live totals.</li>
+                            </ul>
+                            <p class="proj-desc">What I learned: Designing clear Windows desktop layouts, connecting buttons and inputs to object-oriented managers, and validating input so the app never crashes.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- No Projects Found Notice -->
+                <div id="no-projects-found" class="no-results-panel" style="display: none;">
+                    <div class="no-results-icon">&#x1F50D;</div>
+                    <h3>No matching projects found</h3>
+                    <p>Try resetting the category filter or searching for another term (like Python, Java, Linux, or IoT).</p>
+                    <button class="filter-btn" onclick="resetFilters()">Reset Filters</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- StatusStrip Footer -->
+        <footer class="winforms-statusstrip">
+            <div class="status-panels">
+                <div class="status-panel ready">Ready</div>
+                <div class="status-panel">Projects Explorer</div>
+                <div class="status-panel" id="status-project-count">Items: 11 of 11 Projects</div>
+                <div class="status-panel">Windows 7 Aero Glass</div>
+            </div>
+            <div class="status-panels">
+                <p><a href="contact.html">&#x2709; Contact Message Dispatcher</a></p>
+                <p>Copyright 2026</p>
+                <p><a href="#">Privacy Policy</a> - <a href="#">Terms</a></p>
+            </div>
+            <div class="status-grip" title="Resize Grip">&#x25E2;</div>
+        </footer>
+    </div>
+
+    <!-- Enhanced Windows 7 Photo Viewer Pop-Out Modal Dialog (Near Fullscreen) -->
+    <div id="photo-viewer-modal" class="photo-viewer-modal" onclick="closePhotoViewer(event)">
+        <div class="photo-viewer-window" onclick="event.stopPropagation()">
+            <div class="photo-viewer-titlebar">
+                <div class="photo-viewer-title">
+                    <span class="winforms-app-icon">&#x1F5BC;&#xFE0F;</span>
+                    <span id="photo-viewer-filename">Windows Photo Viewer</span>
+                </div>
+                <div class="winforms-window-controls">
+                    <button class="win-btn win-close" onclick="closePhotoViewer()" title="Close (Esc)">&#x2715;</button>
+                </div>
+            </div>
+            <div class="photo-viewer-menubar">
+                <span>File</span>
+                <span>Print</span>
+                <span>E-mail</span>
+                <span>Burn</span>
+                <span>Open</span>
+            </div>
+            <div class="photo-viewer-body">
+                <button class="viewer-nav-btn prev-btn" onclick="navigateViewer(-1)" title="Previous (Left Arrow)">&#x25C0;</button>
+                <div class="viewer-img-container">
+                    <img id="photo-viewer-img" src="" alt="Full Preview">
+                </div>
+                <button class="viewer-nav-btn next-btn" onclick="navigateViewer(1)" title="Next (Right Arrow)">&#x25B6;</button>
+            </div>
+            <div class="photo-viewer-footer">
+                <div class="viewer-controls">
+                    <button class="viewer-tool-btn" onclick="navigateViewer(-1)" title="Previous">&#x25C0; Previous</button>
+                    <span id="photo-viewer-counter" class="viewer-counter">1 of 15</span>
+                    <button class="viewer-tool-btn" onclick="navigateViewer(1)" title="Next">Next &#x25B6;</button>
+                </div>
+                <span id="photo-viewer-info" class="viewer-hint">Press Esc or click outside to close &bull; Arrow keys to browse</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Windows 7 Desktop Taskbar (Superbar) -->
+    <div class="win7-taskbar">
+        <div class="win7-start-orb" title="Start">
+            <span class="orb-flag">&#x229E;</span>
+        </div>
+        <div class="win7-taskbar-tasks">
+            <a href="index.html" class="win7-task-btn " title="About Me Form">
+                <span class="task-icon">&#x1F5C4;</span>
+                <span class="task-label">About Me</span>
+            </a>
+            <a href="projects.html" class="win7-task-btn active" title="Projects Form">
+                <span class="task-icon">&#x1F4C2;</span>
+                <span class="task-label">Projects Explorer (11)</span>
+            </a>
+            <a href="contact.html" class="win7-task-btn " title="Contact Dialog">
+                <span class="task-icon">&#x2709;</span>
+                <span class="task-label">Contact</span>
+            </a>
+        </div>
+        <div class="win7-taskbar-tray">
+            <span class="tray-icon" title="Network Connected">&#x1F4F6;</span>
+            <span class="tray-icon" title="Audio">&#x1F50A;</span>
+            <span class="tray-time" id="tray-clock">18:25</span>
+            <div class="win7-show-desktop" title="Show Desktop"></div>
+        </div>
+    </div>
+
+    <script>
+    // --- Gallery & Windows Photo Viewer Single-Click Logic ---
+    let galleryImages = [];
+    let currentImageIndex = 0;
+
+    function buildGallery() {
+        const imgs = document.querySelectorAll('.project img');
+        galleryImages = [];
+        imgs.forEach((img, idx) => {
+            galleryImages.push({
+                src: img.src,
+                title: img.title || img.alt || img.src.split('/').pop()
+            });
+            img.style.cursor = 'zoom-in';
+            img.style.pointerEvents = 'auto';
+        });
+    }
+
+    function openPhotoViewer(index) {
+        if (galleryImages.length === 0) buildGallery();
+        if (index < 0 || index >= galleryImages.length) return;
+        currentImageIndex = index;
+        const item = galleryImages[index];
+        const modal = document.getElementById('photo-viewer-modal');
+        const img = document.getElementById('photo-viewer-img');
+        const filename = document.getElementById('photo-viewer-filename');
+        const counter = document.getElementById('photo-viewer-counter');
+
+        img.src = item.src;
+        filename.textContent = 'Windows Photo Viewer - ' + item.title.replace(' - Click to expand', '').replace('Click to pop out: ', '');
+        counter.textContent = `${index + 1} of ${galleryImages.length}`;
+
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePhotoViewer(e) {
+        if (e && e.target && e.target.closest('.photo-viewer-window') && !e.target.classList.contains('win-close')) {
+            return;
+        }
+        const modal = document.getElementById('photo-viewer-modal');
+        if (modal) modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    function navigateViewer(step) {
+        let newIndex = currentImageIndex + step;
+        if (newIndex < 0) newIndex = galleryImages.length - 1;
+        if (newIndex >= galleryImages.length) newIndex = 0;
+        openPhotoViewer(newIndex);
+    }
+
+    // Direct event delegation for instant 1-click modal pop-up
+    document.addEventListener('click', function(e) {
+        const targetImg = e.target.closest('.project img');
+        if (targetImg) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (galleryImages.length === 0) buildGallery();
+            const foundIdx = galleryImages.findIndex(i => i.src === targetImg.src);
+            if (foundIdx !== -1) {
+                openPhotoViewer(foundIdx);
+            }
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        const modal = document.getElementById('photo-viewer-modal');
+        if (!modal || modal.style.display !== 'flex') return;
+
+        if (e.key === 'Escape') {
+            closePhotoViewer();
+        } else if (e.key === 'ArrowRight' || e.key === 'Right') {
+            navigateViewer(1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+            navigateViewer(-1);
+        }
+    });
+
+    // --- Interactive Project Filtering System ---
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function applyFilters() {
+        const cards = document.querySelectorAll('.projects-container .project');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const categories = (card.getAttribute('data-category') || '').split(' ');
+            const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+            const text = card.textContent.toLowerCase();
+
+            const matchesCategory = (currentFilter === 'all') || categories.includes(currentFilter);
+            const matchesSearch = !searchQuery || tags.includes(searchQuery) || text.includes(searchQuery);
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'flex';
+                card.classList.add('filter-visible');
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('filter-visible');
+            }
+        });
+
+        // Update status bar
+        const countStatus = document.getElementById('status-project-count');
+        if (countStatus) {
+            countStatus.textContent = `Items: ${visibleCount} of ${cards.length} Projects`;
+        }
+
+        // Show/hide no results notice
+        const noResults = document.getElementById('no-projects-found');
+        if (noResults) {
+            noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
+    }
+
+    function resetFilters() {
+        currentFilter = 'all';
+        searchQuery = '';
+        const searchInput = document.getElementById('project-search-input');
+        if (searchInput) searchInput.value = '';
+        const clearBtn = document.getElementById('clear-search-btn');
+        if (clearBtn) clearBtn.style.display = 'none';
+
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.toggle('active', b.getAttribute('data-filter') === 'all');
+        });
+
+        applyFilters();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        buildGallery();
+
+        // Setup filter button clicks
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.getAttribute('data-filter') || 'all';
+                applyFilters();
+            });
+        });
+
+        // Setup search input
+        const searchInput = document.getElementById('project-search-input');
+        const clearBtn = document.getElementById('clear-search-btn');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                searchQuery = this.value.trim().toLowerCase();
+                if (clearBtn) {
+                    clearBtn.style.display = searchQuery ? 'inline-block' : 'none';
+                }
+                applyFilters();
+            });
+        }
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', function() {
+                if (searchInput) searchInput.value = '';
+                searchQuery = '';
+                this.style.display = 'none';
+                applyFilters();
+            });
+        }
+    });
+    </script>
+</body>
+
+</html>
